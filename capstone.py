@@ -9,7 +9,7 @@ df = pd.read_excel('Kapasitas + Pendidikan.xlsx')
 df['Tahun'] = df['Tahun'].astype(str)
 plt.style.use('dark_background')
 
-selectbox = st.selectbox('Pilihan',('Chart Total Kapasitas Terpasang di Indonesia', 'Chart Persentase Penduduk yang Lulus SMA di Indonesia', 'Korelasi Antara Total Kapasitas Terpasang dan Persentase Penduduk yang Lulus SMA di Indonesia ', 'Dataset'))
+selectbox = st.selectbox('Pilihan',('Chart Total Kapasitas Terpasang di Indonesia', 'Chart Persentase Penduduk yang Lulus SMA di Indonesia', 'Korelasi Antara Total Kapasitas Terpasang dan Persentase Penduduk yang Lulus SMA di Indonesia '))
 if selectbox == 'Chart Total Kapasitas Terpasang di Indonesia':
     plt.plot(df['Tahun'], df['Kapasitas terpasang'])
     plt.title('Jumlah Kapasitas Terpasang di Indonesia', pad=40)
