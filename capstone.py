@@ -16,7 +16,7 @@ if selectbox == 'Chart Total Kapasitas Terpasang di Indonesia':
     plt.ylabel('in MegaWatt')
     st.pyplot(plt)
     st.divider()
-    st.write('Alasan memilih data persentase penduduk Indonesia yang berhasil lulus SMA sebagai barometer kualitas pendidikan di Indonesia adalah Persentase penduduk yang berhasil lulus SMA memberikan gambaran tentang sejauh mana sistem pendidikan di Indonesia berhasil mencapai tujuan utama yaitu memastikan penduduk memiliki kualifikasi pendidikan setara dengan SMA atau disebut wajib belajar 12 tahun. Persentase lulusan SMA juga mencerminkan tingkat keterjangkauan dan kesetaraan pendidikan di Indonesia')
+    st.write('Alasan memilih data Kapasitas listrik terpasang adalah data ini cukup mencerminkan jumlah daya yang tersedia dalam sistem kelistrikan suatu negara. Dengan mempertimbangkan kapasitas listrik terpasang, kita dapat memahami sejauh mana infrastruktur listrik telah berkembang dan seberapa besar kapasitas produksi listrik yang dapat disediakan untuk memenuhi kebutuhan.')
 elif selectbox == 'Chart Persentase Penduduk yang Lulus SMA di Indonesia':
     plt.plot(df['Tahun'], df['Persentase Penduduk yang Lulus SMA'])
     plt.title('Persentase Penduduk Indonesia yang Lulus SMA', pad=40)
@@ -24,8 +24,6 @@ elif selectbox == 'Chart Persentase Penduduk yang Lulus SMA di Indonesia':
     st.pyplot(plt)
     st.divider()
     st.write('Alasan memilih data persentase penduduk Indonesia yang berhasil lulus SMA sebagai barometer kualitas pendidikan di Indonesia adalah Persentase penduduk yang berhasil lulus SMA memberikan gambaran tentang sejauh mana sistem pendidikan di Indonesia berhasil mencapai tujuan utama yaitu memastikan penduduk memiliki kualifikasi pendidikan setara dengan SMA atau disebut wajib belajar 12 tahun. Persentase lulusan SMA juga mencerminkan tingkat keterjangkauan dan kesetaraan pendidikan di Indonesia')
-elif selectbox == 'Dataset':
-    st.write(df)
 else:
     fig, ax1 = plt.subplots()
     ax1.plot(df['Tahun'], df['Kapasitas terpasang'], label='Kapasitas terpasang')
